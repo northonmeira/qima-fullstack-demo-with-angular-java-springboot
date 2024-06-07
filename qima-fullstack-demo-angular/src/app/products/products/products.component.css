@@ -1,0 +1,29 @@
+table {
+  width: 100%;
+}
+
+.loading-spinner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 25px;
+}
+
+.action-column {
+  flex: 0 0 125px;
+}
+
+.action-column-header {
+  margin: 0 auto;
+}
+
+.mat-mdc-icon-button.mat-mdc-button-base {
+  --mdc-icon-button-state-layer-size: 51px;
+
+}
+
+.add-icon {
+  --mdc-icon-button-state-layer-size: 55px !important;
+  color: black;
+}

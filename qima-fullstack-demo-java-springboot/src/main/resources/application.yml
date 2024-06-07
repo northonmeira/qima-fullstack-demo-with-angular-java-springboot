@@ -1,0 +1,28 @@
+cors:
+  originPatterns: http://localhost:8888,http://localhost:8080,http://localhost:4200
+security:
+  jwt:
+    token:
+      secret-key: 53cr37
+      expire-length: 7200000
+server:
+  port: 8080
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/qima_tech_fullstack_demo?useTimezone=true&serverTimeZone=UTC
+    username: root
+    password: admin123
+  jpa:
+    hibernate:
+      ddl-auto: none
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+    show-sql: false
+springdoc:
+  pathsToMatch: 
+    - /auth/**
+    - /api/**
+  swagger-ui:
+    use-root-path: true

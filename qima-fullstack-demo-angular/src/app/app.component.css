@@ -1,0 +1,12 @@
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.espacamento-toolbar {
+  flex: 1 1 auto;
+}
+
+.tittle-font {
+  font: 20px Roboto, sans-serif;
+
+}

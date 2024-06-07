@@ -1,0 +1,58 @@
+<mat-card class="mat-card">
+  <mat-card-header>
+    <mat-card-title>Product</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <form [formGroup]="form">
+      <mat-form-field class="full-width">
+        <mat-label>Name</mat-label>
+        <input matInput placeholder="Name" formControlName="name">
+        <mat-error *ngIf="form.get('name')?.invalid">name is
+          <strong>required</strong>
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="full-width">
+        <mat-label>Description</mat-label>
+        <input matInput placeholder="Description" formControlName="description">
+        <mat-error *ngIf="form.get('description')?.invalid">description is
+          <strong>required</strong>
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="full-width">
+        <mat-label>Price</mat-label>
+        <input currencyMask matInput placeholder="Price" formControlName="price">
+        <mat-error *ngIf="form.get('price')?.invalid">price is
+          <strong>required</strong>
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="full-width">
+        <mat-label>Category</mat-label>
+        <mat-select formControlName="categoryId">
+          <mat-option *ngFor="let category of categorys" [value]="category.id">{{category.name}}</mat-option>
+        </mat-select>
+        <mat-error *ngIf="form.get('categoryId')?.invalid">Category is
+          <strong>required</strong>
+        </mat-error>
+      </mat-form-field>
+
+      <div>
+        <mat-label class="radio-font">Is Product Available: </mat-label>
+        <mat-radio-group formControlName="available">
+          <mat-radio-button value=true [checked]="product != undefined && isProductAvailable()">Yes</mat-radio-button>
+          <mat-radio-button value=false [checked]="product != undefined && !isProductAvailable()">No</mat-radio-button>
+        </mat-radio-group>
+        <mat-error *ngIf="form.get('available')?.invalid">
+          <strong>required</strong>
+        </mat-error>
+      </div>
+
+    </form>
+  </mat-card-content>
+  <mat-card-actions align="end">
+    <button mat-button color="primary" (click)="onSubmit()">Save</button>
+    <button mat-button (click)="onCancel()">Cancel</button>
+  </mat-card-actions>
+</mat-card>

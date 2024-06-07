@@ -1,0 +1,2 @@
+INSERT INTO `qima_tech_fullstack_demo`.`users` (`user_name`, `password`, `account_non_expired`, `account_non_locked`, `credentials_non_expired`, `enabled`) VALUES
+	('admin', 'ddb903239b8cfb0e14cbf8455832eee658492e30170d816d2787e9ccecc25823989dfa4beded9a47', b'1', b'1', b'1', b'1');
