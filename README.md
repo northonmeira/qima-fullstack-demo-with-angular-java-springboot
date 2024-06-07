@@ -14,6 +14,11 @@
 
 After running the aplication, see the Documentation in DOCUMENTATION BASE URL http://localhost:8080/swagger-ui/index.html
 
+# POSTMAN COLECTION
+
+Import POSTMAN collection via URL:
+https://api.postman.com/collections/2897632-212456ef-1983-42e1-9afa-b924f16cc0ba?access_key=PMAT-01HZTB73JTXRFSXQJ0M0MM9FPG
+
 USER FOR AUTHENTICATION ENDPOINT { "username": "admin" "password": "admin123" }
 
 # QimaFullstackDemoAngular1
